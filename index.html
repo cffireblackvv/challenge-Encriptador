@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+
+    <title>Encriptador</title>
+    <style>
+        /* Estilos base */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 100%;
+            height: auto;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .seccion1 {
+            margin-bottom: 20px;
+        }
+
+        .seccion1 .contenedor-cajatexto {
+            margin-bottom: 20px;
+        }
+
+        .seccion1 .cajatexto {
+            width: 100%;
+            max-width: 400px;
+            height: 200px;
+            resize: none;
+        }
+
+        .alerta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .alerta img {
+            width: 30px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .contenedor-boton {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .seccion2 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .seccion2 .contenedoranimado {
+            flex: 1 1 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .seccion2 .contenedoranimado img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .seccion2 .contenedor-textoparrafo {
+            flex: 1 1 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .seccion2 .contenedor-copiar {
+            flex: 1 1 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .seccion2 .contenedor-resultado {
+            flex: 1 1 100%;
+            text-align: center;
+        }
+
+        .texto-resultado {
+            font-size: 20px;
+        }
+
+        /* Estilos para pantallas pequeñas */
+        @media (max-width: 767px) {
+            .cajatexto {
+                height: 150px;
+            }
+        }
+
+        /* Estilos para pantallas medianas */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .cajatexto {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="Imagenes/Logo.svg" alt="logo">
+    </header>
+    <main>
+        <section class="seccion1">
+            <div class="contenedor-cajatexto">
+                <textarea placeholder="Ingrese el mensaje" class="cajatexto"></textarea>
+            </div>
+            <div class="alerta">
+                <img src="Imagenes/alerta.svg" alt="alerta">
+                <p>Solo letras minúsculas</p>
+            </div>
+            <div class="contenedor-boton">
+                <input type="button" class="btn-Codificar" value="Codificar">
+                <input type="button" class="btn-decodificar" value="Decodificar">
+            </div>
+        </section>
+        <section class="seccion2">
+            <div class="contenedoranimado">
+                <img src="Imagenes/Muñeco.svg" alt="animado">
+            </div>
+            <div class="contenedor-textoparrafo">
+                <h3>Ningún mensaje fue encontrado</h3>
+                <p>Ingresa el texto a codificar o decodificar.</p>
+            </div>
+            <div class="contenedor-copiar">
+                <input type="button" class="btn-copiar" value="Copiar">
+            </div>
+            <div class="contenedor-resultado">
+                <p class="texto-resultado"></p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
